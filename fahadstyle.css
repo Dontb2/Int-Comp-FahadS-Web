@@ -217,68 +217,53 @@ header.sticky {
 
 
 .achievement {
-    min-height: 60vh; /* FIXED */
-    background: var(--second-bg-color);
-    background: url(./achievement.jpg);
-    background-position: top right;
-    background-size: cover;
-    display: flex;
-    justify-content: right;
+    --section-img: url(./achievement.jpg);
+    min-height: min(60vh, 70vw);
 }
-
-.achievement h2 {
-    color: var(--main-color);
-    text-shadow: 2px 2px 4px var(--bg-color);
-    
-}
-
-.achievement h1 {
-    font-size: 1.5rem;
-    color: white;
-    text-shadow: 2px 2px 4px var(--bg-color);
-    
-}
-
 .sketch {
-    min-height: 75vh; /* FIXED */
-    background: var(--second-bg-color);
-    background: url(./sketch.jpg);
-    background-position: top right;
-    background-size: cover;
-    display: flex;
-    justify-content: right;
+    --section-img: url(./sketch.jpg);
+    min-height: min(75vh, 80vw);
 }
-
-.sketch h2 {
-    color: var(--main-color);
-    text-shadow: 2px 2px 4px var(--bg-color);
-    
-}
-
 .autocad {
-    min-height: 60vh; /* FIXED */
-    background: var(--second-bg-color);
-    background: url(./autocad.jpg);
-    background-position: top right;
-    background-size: cover;
-    display: flex;
-    justify-content: right;
+    --section-img: url(./autocad.jpg);
+    min-height: min(60vh, 70vw);
 }
-
-.autocad h2 {
-    color: var(--main-color);
-    text-shadow: 2px 2px 4px var(--bg-color);
-    
-}
-
 .family {
-    min-height: 110vh; /* FIXED */
-    background: var(--second-bg-color);
-    background: url(./family.jpg);
+    --section-img: url(./family.jpg);
+    min-height: min(110vh, 125vw);
+}
+
+:is(.achievement, .sketch, .autocad, .family) {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background: var(--second-bg-color);   /* inalis ang dating cover na picture */
+}
+
+/* Likod: malabong picture na pumupuno sa buong section */
+:is(.achievement, .sketch, .autocad, .family)::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background-image: var(--section-img);
+    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    display: flex;
-    justify-content: left;
+    filter: blur(22px) brightness(.55);
+    transform: scale(1.15);
+}
+
+/* Harap: ang BUONG picture, nasa gitna, hindi naputol */
+:is(.achievement, .sketch, .autocad, .family)::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: var(--section-img);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
 .family h2 {
