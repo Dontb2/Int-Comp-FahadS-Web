@@ -214,23 +214,41 @@ header.sticky {
 /* Section Home Style */
 
 /* Portfolio Style */
-
-
 .achievement {
     --section-img: url(./achievement.jpg);
     min-height: min(60vh, 70vw);
+    
+}
+.achievement h2 {
+    color: var(--main-color);
+    text-shadow: 2px 2px 4px var(--bg-color);
+    text-align: right;
 }
 .sketch {
     --section-img: url(./sketch.jpg);
     min-height: min(75vh, 80vw);
 }
+.sketch h2 {
+    color: var(--main-color);
+    text-shadow: 2px 2px 4px var(--bg-color);
+}
 .autocad {
     --section-img: url(./autocad.jpg);
     min-height: min(60vh, 70vw);
 }
+.autocad h2 {
+    color: var(--main-color);
+    text-shadow: 2px 2px 4px var(--bg-color);
+    text-align: left;
+    
+}
 .family {
     --section-img: url(./family.jpg);
     min-height: min(110vh, 125vw);
+}
+.family h2 {
+    color: var(--main-color);
+    text-shadow: 2px 2px 4px var(--bg-color);
 }
 
 :is(.achievement, .sketch, .autocad, .family) {
@@ -266,11 +284,7 @@ header.sticky {
     background-size: contain;
 }
 
-.family h2 {
-    color: var(--main-color);
-    text-shadow: 2px 2px 4px var(--bg-color);
-    
-}
+
 .portfolio {
     background: var(--second-bg-color);
     background: url(./bgu.jpg);
