@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Get Resume</title>
+        <style>
+            h2 {
+                border-style: double;
+                text-align: center;
+                margin-left: 70px;
+                margin-right: 70px;
+            }
+
+            div.one {
+                text-align: center;
+            }
+
+            label {
+                width: 190px;
+                display: inline-block;
+            }
+
+            /* ===== Dagdag lang: Back button at auto-fit sa phone/tablet ===== */
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                overflow-x: hidden;
+            }
+
+            .back-btn {
+                display: inline-block;
+                padding: 10px 22px;
+                background: #0b6e99;
+                color: #fff;
+                border: 2px solid #0b6e99;
+                border-radius: 8px;
+                font-family: Arial, sans-serif;
+                font-size: 15px;
+                font-weight: bold;
+                text-decoration: none;
+            }
+            .back-btn:hover {
+                background: #fff;
+                color: #0b6e99;
+            }
+
+            input[type="text"],
+            select {
+                max-width: 100%;
+            }
+
+            @media (max-width: 800px) {
+                h2 {
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+            }
+
+            @media (max-width: 600px) {
+                label {
+                    display: block;
+                    width: 100%;
+                    margin-bottom: 4px;
+                }
+                input[type="text"] {
+                    width: 100%;
+                    max-width: 340px;
+                }
+            }
+        </style>
+    </head>
+
+    <body bgcolor="cyan">
+
+    <a href="index.html#home" class="back-btn">&larr; Back to Home</a>
+
+    <h2>Student Registration Form</h2>
+
+<br>
+
+
+<div class="one">
+
+<form>
+<label>Name:</label>
+<input type="text" name="firstname" value="Enter full Name"><br><br>
+
+<label>Father's Name:</label>
+<input type="text" name="father's name"><br><br>
+
+<label>Mother's Name:</label>
+<input type="text" name="father's name"><br><br>
+
+<label>Phone Number:</label>
+<input type="text" name="father's name" value="017xxxxxxxx"><br><br>
+
+<label>Email:</label>
+<input type="text" name="father's name" value="sample@example.com"><br><br>
+
+<label>Gender:</label>
+<input type="radio" name="gender" value="Male">
+Male
+<input type="radio" name="gender" value="female">
+Female
+<input type="radio" name="gender" value="other">
+Other<br><br>
+
+<label>Date Of Birth:</label>
+<select name="day">
+<option value="day"></option>
+</select>
+-
+<select name="month">
+    <option value="month"></option>
+    </select>
+-
+<select name="year">
+    <option value="year"></option>
+    </select>
+(dd-mm-yyyy)<br><br>
+
+<label>Address:</label>
+<input type="text" name="address" value="street:- House:- Road:-"><br><br>
+
+<label>Blood Group:</label>
+<select name="day">
+    <option value="day">Selected</option>
+    </select><br><br>
+
+Department:
+<input type="radio" name="gender" value="CSE">
+CSE
+<input type="radio" name="gender" value="EEE">
+EEE
+<input type="radio" name="gender" value="BBA">
+BBA<br><br>
+
+Course:
+<input type="checkbox" class="checkbox">
+C
+<input type="checkbox" class="checkbox">
+C++
+<input type="checkbox" class="checkbox">
+Java
+<input type="checkbox" class="checkbox">
+AI
+<input type="checkbox" class="checkbox">
+Machine Learning
+<input type="checkbox" class="checkbox">
+Robotics<br><br>
+
+Photo:
+<input type="file" name="resume" value="resume"><br><br>
+
+<a href="submit">Submit</a>
+<input type="reset">
+
+</div>
+</form>
+    </body>
+</html>

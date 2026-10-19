@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities | Portfolio Website</title>
+
+    <!-- Tandaan ang napiling Dark/Light mode agad para walang kisap -->
+    <script>try{var t=localStorage.getItem('theme');if(t){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
+
+<!-- #CSS -->
+
+    <link rel="stylesheet" href="./fahadstyle.css">
+    <link rel="website icon" type="png" href="fslogo.png">
+
+<!-- #box icon -->
+
+  <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+<!--remox icon-->
+
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Header -->
+
+<header>
+  <a href="index.html" class="logo"><span><sup>2026-2027</sup></span> IT DEPARTMENT</a>
+  <div class="bx bx-menu" id="menu-icon"></div>
+  <ul class="navlist">
+    <li><a href="index.html#home">Home</a></li>
+    <li><a href="index.html#portfolio">Portfolio</a></li>
+    <li><a href="journal.html">Journal</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li class="nav-resume"><a href="resume.html">Resume</a></li>
+    <li class="nav-theme"><button type="button" class="theme-toggle theme-toggle-menu" aria-label="Switch to light mode"><i class="ri-sun-line"></i><span>Light mode</span></button></li>
+  </ul>
+
+<div class="top-btnn">
+  <button type="button" class="theme-toggle" aria-label="Switch to light mode" title="Light / Dark mode"><i class="ri-sun-line"></i></button>
+  <a href="resume.html" class="h-btn h-btn-resume">Resume</a>
+  <a href="index.html#contact" class="h-btn">Contact me</a>
+</div>
+
+</header>
+
+<!-- Header -->
+
+<!-- Activities Page Section -->
+
+<section class="portfolio activities-page" id="activities-page">
+
+  <a href="index.html#portfolio" class="back-btn"><i class="ri-arrow-left-line"></i> Back to Folders</a>
+
+  <div class="center-text">
+    <h2 id="folder-title"></h2>
+    <p class="folder-level" id="folder-level"></p>
+  </div>
+
+  <!-- Dito ilalagay ng JavaScript ang mga activity ng current page -->
+  <div class="Portfolio-content" id="activity-list"></div>
+
+  <!-- Pagination -->
+  <div class="pagination" id="pagination"></div>
+  <p class="page-info" id="page-info"></p>
+
+</section>
+
+<!-- Activities Page Section -->
+
+<div class="footer">
+  <div class="copyright">
+    <p><sup>2026</sup> FCS - All Rights Reserved.</p>
+  </div>
+  <a href="#" class="scroll-top">
+    <i class="ri-arrow-up-s-fill"></i>
+  </a>
+</div>
+
+<script src="./fahadscript.js"></script>
+<script src="./activities.js"></script>
+
+</body>
+</html>
