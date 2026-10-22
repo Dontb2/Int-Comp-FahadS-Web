@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Thank You | Student Registration</title>
+    <link rel="icon" type="image/png" href="fslogo.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            min-height: 100dvh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #2e8b1f, #1b5a12);
+            color: #13261a;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 520px;
+            padding: clamp(28px, 6vw, 48px);
+            text-align: center;
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 0 25px rgba(19, 187, 255, .35);
+        }
+
+        .check {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 72px;
+            height: 72px;
+            margin-bottom: 18px;
+            border-radius: 50%;
+            background: #2a8a1c;
+            color: #ffffff;
+            font-size: 40px;
+            font-weight: 900;
+        }
+
+        h1 {
+            font-size: clamp(1.6rem, 5vw, 2.2rem);
+            line-height: 1.2;
+        }
+
+        h1 span {
+            color: #2a8a1c;
+        }
+
+        p {
+            margin-top: 12px;
+            color: #4a5d4c;
+            line-height: 1.7;
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 11px 24px;
+            border: 2px solid #2a8a1c;
+            border-radius: 8px;
+            background: #2a8a1c;
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all .5s ease;
+        }
+        .btn:hover {
+            background: transparent;
+            color: #2a8a1c;
+            box-shadow: 0 0 20px #2a8a1c;
+        }
+        .btn.outline {
+            background: transparent;
+            color: #2a8a1c;
+        }
+        .btn.outline:hover {
+            background: #2a8a1c;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <div class="check">&#10003;</div>
+    <h1>Thank <span>You!</span></h1>
+    <p>Your registration was sent successfully. I will check it and get back to you soon.</p>
+    <p>Your information is protected under the Data Privacy Act of 2012 (RA 10173) and will be used only for your registration.</p>
+
+    <div class="actions">
+        <a href="index.html#home" class="btn">&larr; Back to Home</a>
+        <a href="register.html" class="btn outline">Register Another</a>
+    </div>
+</div>
+
+</body>
+</html>
