@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Journal | Fahad C. Sumandar</title>
+    <meta name="description" content="Short notes from Fahad C. Sumandar about what he is learning in web development: HTML, CSS, JavaScript and Java.">
+    <meta name="theme-color" content="#2a8a1c">
+
+<!-- #CSS -->
+
+    <link rel="stylesheet" href="./fahadstyle.css">
+    <link rel="icon" type="image/png" href="fslogo.png">
+
+<!-- Inter font (ginagamit ng CSS) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+<!--remox icon-->
+
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+
+<input type="checkbox" id="theme-switch" class="theme-switch-input" aria-label="Dark mode">
+
+<!-- Header -->
+
+<header>
+  <a href="index.html" class="logo"><span><sup>2026-2027<br><center>"BINS"</center></sup></span>CCIS DEPARTMENT</a>
+  <a href="#site-menu" id="menu-icon" aria-label="Open menu"><i class="ri-menu-line"></i></a>
+  <ul class="navlist" id="site-menu">
+    <li class="nav-close"><a href="#_"><i class="ri-close-line"></i> Close menu</a></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="news.html">News &amp; Updates</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="journal.html" aria-current="page">Journal</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li class="nav-resume"><a href="resume.html">Resume</a></li>
+    <li class="nav-theme"><label for="theme-switch" class="theme-toggle theme-toggle-menu"><i class="ri-sun-fill icon-sun"></i><i class="ri-moon-fill icon-moon"></i><span class="t-dark">Dark mode</span><span class="t-light">Light mode</span></label></li>
+  </ul>
+
+<div class="top-btnn">
+  <label for="theme-switch" class="theme-toggle" title="Light / Dark mode"><i class="ri-sun-fill icon-sun"></i><i class="ri-moon-fill icon-moon"></i></label>
+  <a href="resume.html" class="h-btn h-btn-resume">Resume</a>
+  <a href="contact.html" class="h-btn">Contact me</a>
+</div>
+
+</header>
+
+<!-- Header -->
+
+<!-- Journal -->
+
+<section class="journal journal-page" id="journal-page">
+
+  <a href="index.html" class="back-btn"><i class="ri-arrow-left-line"></i> Back to Home</a>
+
+  <div class="center-text">
+    <h2>Learning <span>Journal</span></h2>
+    <p class="section-sub">Short notes on what I am learning in web development.</p>
+  </div>
+
+  <div class="journal-list" id="journal-all">
+  <!-- PARA MAGDAGDAG NG POST: kopyahin ang isang <article class="post"> at ilagay sa PINAKAUNA.
+       Ang id ay dapat tumugma sa link sa Home (halimbawa journal.html#dark-mode-css-variables). -->
+
+  <article class="post" id="dark-mode-css-variables">
+    <div class="post-meta"><span class="post-tag">CSS</span><span class="post-date">October 2026</span></div>
+    <h2>Dark mode using CSS variables</h2>
+    <p>Instead of changing every color one by one, I saved my main colors as CSS variables such as the background, text, and main color.</p>
+    <p>When the theme changes, I only replace the values of those variables, and the whole page updates. A small JavaScript button changes the theme and saves my choice in the browser, so the website remembers it the next time I visit.</p>
+    <p>Next step: make sure every card, button, and form still has enough contrast to read in both themes.</p>
+  </article>
+
+  <article class="post" id="contact-form-formsubmit">
+    <div class="post-meta"><span class="post-tag">JavaScript</span><span class="post-date">October 2026</span></div>
+    <h2>Sending contact form messages to my email</h2>
+    <p>A website made only of HTML, CSS, and JavaScript cannot send emails by itself, so I used a free form service called FormSubmit.</p>
+    <p>The form sends the name, email, phone, and message using fetch(), and the page shows a thank-you message without reloading. I also learned that the first message needs to be activated through an email, and that the page must be opened from a web server, not as a plain file on the computer.</p>
+  </article>
+
+  <article class="post" id="portfolio-folders-pagination">
+    <div class="post-meta"><span class="post-tag">JavaScript</span><span class="post-date">October 2026</span></div>
+    <h2>Organizing my portfolio with folders and pagination</h2>
+    <p>My portfolio was a very long page because every activity was copied by hand in HTML. I changed it so the activities live in one JavaScript list, and the page builds the cards from that list.</p>
+    <p>For pagination, I only show 6 activities at a time by slicing the list, then create the Prev, Next, and number buttons. I also learned how to read the folder name from the page link using URLSearchParams.</p>
+  </article>
+
+  <article class="post" id="responsive-layout-clamp-grid">
+    <div class="post-meta"><span class="post-tag">CSS</span><span class="post-date">October 2026</span></div>
+    <h2>Making my layout fit phones, tablets, and laptops</h2>
+    <p>I learned that a page needs the viewport meta tag, and that fixed widths such as 600px or 530px break on small screens.</p>
+    <p>The fixes that helped most were clamp() for font sizes, a grid with auto-fit and minmax() so the cards change columns by themselves, and media queries only for the bigger layout changes like the menu.</p>
+  </article>
+</div>
+
+</section>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+
+    <div class="footer-links">
+      <a href="portfolio.html" class="glass"><i class="ri-folder-3-fill"></i> Portfolio</a>
+      <a href="journal.html" class="glass"><i class="ri-book-open-fill"></i> Learning Journal</a>
+      <a href="resume.html" class="glass"><i class="ri-file-user-fill"></i> Resume</a>
+      <a href="register.html" class="glass"><i class="ri-user-add-fill"></i> Register</a>
+    </div>
+
+    <div class="footer-brand">
+      <img src="fslogo.png" alt="FCS logo">
+      <h3>I-BINS</h3>
+      <p>Web Developer &amp; Designer</p>
+      <p>Taguig, Metro Manila, Philippines</p>
+    </div>
+
+    <div class="footer-contact glass">
+      <h4>Contact Us</h4>
+      <p>Email:<br><a href="mailto:sumandarfahad4@gmail.com">sumandarfahad4@gmail.com</a></p>
+      <h4>Follow Us</h4>
+      <div class="footer-social">
+      <a href="https://www.facebook.com/X44FahadSKiie" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+      <a href="https://github.com/Dontb2" aria-label="GitHub"><i class="ri-github-fill"></i></a>
+      <a href="https://t.me/dontbesad2" aria-label="Telegram"><i class="ri-telegram-fill"></i></a>
+      <a href="https://youtube.com/@stv2k23?si=X2fgr0auIx7AhbFi" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p class="copyright"><sup>2026</sup> FCS - All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- Lumulutang na Back to Top (HTML at CSS lang) -->
+<a href="#" class="back-to-top" aria-label="Back to top"><i class="ri-arrow-up-s-fill"></i></a>
+
+</body>
+</html>
