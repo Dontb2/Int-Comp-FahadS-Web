@@ -440,6 +440,47 @@ html:has(#theme-switch:checked) .social i { color: #062006; }
 
 .video-open { margin-top: 1.5rem; text-align: center; }
 
+/* ---------- Theme Song ---------- */
+.music { background: var(--bg-color); }
+.music-card {
+    display: flex;
+    align-items: center;
+    gap: clamp(16px, 3vw, 28px);
+    max-width: 720px;
+    margin: 3rem auto 0;
+    padding: clamp(18px, 3vw, 28px);
+    background: var(--card-color);
+    border: 1px solid var(--line-color);
+    border-left: 5px solid var(--main-color);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+}
+.music-cover {
+    flex-shrink: 0;
+    width: clamp(80px, 18vw, 120px);
+    height: clamp(80px, 18vw, 120px);
+    object-fit: cover;
+    border: 3px solid var(--main-color);
+    border-radius: 14px;
+}
+.music-info { flex: 1; min-width: 0; }
+.music-info h3 {
+    font-family: var(--font-head);
+    font-size: clamp(1.2rem, 2vw + .6rem, 1.7rem);
+    line-height: 1.2;
+}
+.music-info p {
+    margin: 4px 0 14px;
+    color: var(--other-color);
+    font-size: 14px;
+}
+.music-info audio { display: block; width: 100%; }
+
+@media (max-width: 520px) {
+    .music-card { flex-direction: column; text-align: center; }
+}
+
+
 /* =====================================================
    MGA SECTION NA MAY SARILING PICTURE
    Achievement, Technical Drafting, AutoCAD, Family
