@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 2 | Introduction to Computer</title>
+    <link rel="icon" type="image/png" href="../../fslogo.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            padding: 20px;
+            background: #eef7ee;
+            color: #13261a;
+            text-align: center;
+        }
+
+        .back {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 22px;
+            color: #2a8a1c;
+            border: 2px solid #2a8a1c;
+            border-radius: 30px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .back:hover {
+            background: #2a8a1c;
+            color: #fff;
+        }
+
+        h1 {
+            margin-bottom: 6px;
+            color: #2a8a1c;
+        }
+
+        .subtitle {
+            margin-bottom: 24px;
+        }
+
+        /* Dalawang calendar na magkatabi; sa phone ay magkapatong */
+        .calendars {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+        }
+
+        table {
+            width: 100%;
+            max-width: 340px;
+            border-collapse: collapse;
+            background: #fff;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, .15);
+        }
+
+        caption {
+            padding: 12px;
+            background: #2a8a1c;
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        th, td {
+            width: 14.28%;
+            padding: 10px 4px;
+            border: 1px solid #b5d3b5;
+            text-align: center;
+        }
+
+        th {
+            background: #d6ecd6;
+        }
+
+        /* Sunday = pula */
+        th:first-child,
+        td:first-child {
+            color: #c0392b;
+        }
+
+        td:hover {
+            background: #eaf7ea;
+        }
+
+        .today {
+            background: #2a8a1c;
+            color: #fff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<a href="activities.html#folder-intro-computer" class="back">&larr; Back to Activities</a>
+
+<h1>Activity 2</h1>
+<p class="subtitle">Two calendars using HTML tables and CSS</p>
+
+<div class="calendars">
+
+    <!-- ===== CALENDAR 1: NOVEMBER 2026 ===== -->
+    <table>
+        <caption>November 2026</caption>
+        <thead>
+            <tr>
+                <th>Sun</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td>
+            </tr>
+            <tr>
+                <td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td>
+            </tr>
+            <tr>
+                <td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td>
+            </tr>
+            <tr>
+                <td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td>
+            </tr>
+            <tr>
+                <td>29</td><td>30</td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- ===== CALENDAR 2: DECEMBER 2026 ===== -->
+    <table>
+        <caption>December 2026</caption>
+        <thead>
+            <tr>
+                <th>Sun</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td><td></td><td>1</td><td>2</td>
+                <td>3</td><td>4</td><td>5</td>
+            </tr>
+            <tr>
+                <td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td>
+            </tr>
+            <tr>
+                <td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td>
+            </tr>
+            <tr>
+                <td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td>
+            </tr>
+            <tr>
+                <td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td></td><td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    
+
+</div>
+
+</body>
+</html>
