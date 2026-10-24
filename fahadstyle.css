@@ -1588,7 +1588,7 @@ html:has(#theme-switch:checked) .news-tag { color: #062006; }
 .back-to-top {
     position: fixed;
     right: 20px;
-    bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+    bottom: calc(84px + env(safe-area-inset-bottom, 0px));
     z-index: 1500;
     display: flex;
     align-items: center;
