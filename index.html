@@ -122,7 +122,7 @@
 
 </div>
 
-  <p class="section-sub cta-line">Classmate or instructor? <a href="#contact">Send me a testimonial</a>.</p>
+  <p class="section-sub cta-line">Classmate or instructor? <a href="https://docs.google.com/forms/d/e/1FAIpQLSc5Iti4pNx5TtDOY2lKHufbrwo0wptJgwyb03gtHWlMO_O1_Q/viewform" target="_blank" rel="noopener">Send me a testimonial</a>.</p>
 </section>
 
 <!-- ===== CONTACT (nasa bawat page) ===== -->
@@ -221,6 +221,59 @@
 
 <!-- Lumulutang na Back to Top (HTML at CSS lang) -->
 <a href="#" class="back-to-top" aria-label="Back to top"><i class="ri-arrow-up-s-fill"></i></a>
+
+    <script>
+const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSCQCBX8AfTFub35bltWmk5uWNwHOe1xWtumu9XDLjoS01apQEpDhaaYdMFxqsmawwBNYiVDztenfth/pub?gid=2001147223&single=true&output=csv";
+const list = document.getElementById("testimonial-list");
+
+function parseCSV(t) {
+  const rows = []; let row = [], cur = "", q = false;
+  for (let i = 0; i < t.length; i++) {
+    const c = t[i];
+    if (q) {
+      if (c === '"' && t[i + 1] === '"') { cur += '"'; i++; }
+      else if (c === '"') q = false;
+      else cur += c;
+    } else if (c === '"') q = true;
+    else if (c === ",") { row.push(cur); cur = ""; }
+    else if (c === "\n" || c === "\r") {
+      if (c === "\r" && t[i + 1] === "\n") i++;
+      row.push(cur); rows.push(row); row = []; cur = "";
+    } else cur += c;
+  }
+  if (cur || row.length) { row.push(cur); rows.push(row); }
+  return rows;
+}
+
+function el(tag, cls, text) {
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (text) e.textContent = text;
+  return e;
+}
+
+fetch(CSV_URL)
+  .then(r => r.text())
+  .then(text => {
+    const rows = parseCSV(text).slice(1).filter(r => r[2] && r[2].trim()).reverse();
+    if (!rows.length || !list) return;
+    list.innerHTML = "";
+    rows.forEach(([name, role, msg]) => {
+      const fig = el("figure", "testimonial");
+      fig.appendChild(el("i", "ri-double-quotes-l quote-icon"));
+      fig.appendChild(el("blockquote", "", msg));
+      const cap = el("figcaption");
+      cap.appendChild(el("span", "avatar", (name || "?").trim().charAt(0).toUpperCase()));
+      const who = el("span");
+      who.appendChild(el("strong", "", name));
+      who.appendChild(el("small", "", role));
+      cap.appendChild(who);
+      fig.appendChild(cap);
+      list.appendChild(fig);
+    });
+  })
+  .catch(() => {});
+</script>
 
 </body>
 </html>
