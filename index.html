@@ -145,7 +145,9 @@
 
       <input type="text" id="c-name" name="name" placeholder="Your name" required>
       <input type="email" id="c-email" name="email" placeholder="Email Address..." required>
-      <input type="tel" id="c-phone" name="phone" placeholder="Phone Number..." required>
+      <input type="tel" id="c-phone" name="phone" placeholder="09123456789 or +14155552671" required
+       pattern="(09[0-9]{9}|\+[1-9][0-9]{7,14})" maxlength="16" inputmode="tel"
+       title="PH: 09123456789 or +639123456789. International: + and country code, 8 to 15 digits (e.g. +14155552671)">
       <textarea name="message" id="c-message" cols="30" rows="10" placeholder="Write Message Here." required></textarea>
       <input type="submit" value="Send Message" class="send-btn">
       <p class="form-note">Your message will be sent directly to my inbox.</p>
