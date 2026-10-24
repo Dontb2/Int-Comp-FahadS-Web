@@ -447,6 +447,7 @@ html:has(#theme-switch:checked) .social i { color: #062006; }
    ===================================================== */
 .achievement { --section-img: url(./achievement.jpg); min-height: min(60vh, 70vw); justify-content: flex-end; }
 .sketch      { --section-img: url(./sketch.jpg);      min-height: min(75vh, 80vw); justify-content: flex-end; }
+.autocad     { --section-img: url(./autocad1.png);     min-height: min(60vh, 70vw); justify-content: flex-end; }
 .autocad     { --section-img: url(./autocad.jpg);     min-height: min(60vh, 70vw); justify-content: flex-end; }
 .family      { --section-img: url(./family.jpg);      min-height: min(110vh, 125vw); justify-content: flex-start; }
 
