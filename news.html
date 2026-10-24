@@ -20,6 +20,43 @@
 <!--remox icon-->
 
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        /* ---------- Introduction Video ---------- */
+.intro-video { background: var(--second-bg-color); }
+.video-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 860px;
+    margin: 3rem auto 0;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #0d1a0d;
+    border: 3px solid var(--main-color);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+}
+
+/* Vertical video (recorded on phone) */
+.video-wrap.vertical {
+    max-width: 380px;
+    aspect-ratio: 9 / 16;
+}
+
+.video-wrap iframe,
+.video-wrap video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+@media (max-width: 600px) {
+    .video-wrap { margin-top: 2rem; border-width: 2px; border-radius: 12px; }
+}
+
+.video-open { margin-top: 1.5rem; text-align: center; }
+    </style>
 </head>
 <body>
 
