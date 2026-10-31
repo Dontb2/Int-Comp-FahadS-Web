@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <!-- ===== SHARING PREVIEW (Facebook, Telegram, Messenger) =====
+         PALITAN ang YOUR-WEBSITE-LINK ng tunay na link ng website mo, halimbawa:
+         https://fahad.netlify.app  (siguraduhing https:// ang simula, at walang / sa dulo)
+         Ang picture ay ang share-preview.png (1200x630) na nasa parehong folder. -->
+    <meta name="description" content="Portfolio of Fahad C. Sumandar, a web developer and designer. See my HTML, CSS, JavaScript and Java activities, my learning journal, skills, and resume.">
+    <meta name="theme-color" content="#2a8a1c">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="FCS">
+    <meta property="og:title" content="FCS | Web Developer &amp; Designer">
+    <meta property="og:description" content="Portfolio of a web developer and designer: HTML, CSS, JavaScript and Java activities, learning journal, skills, and resume.">
+    <meta property="og:url" content="https://int-comp-fahads-web.netlify.app">
+    <meta property="og:image" content="https://int-comp-fahads-web.netlify.app/share-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="FCS - Web Developer and Designer">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FCS | Web Developer &amp; Designer">
+    <meta name="twitter:description" content="Portfolio of a web developer and designer: HTML, CSS, JavaScript and Java activities, learning journal, skills, and resume.">
+    <meta name="twitter:image" content="https://int-comp-fahads-web.netlify.app/share-preview.png">
+
+<!-- #CSS -->
+
+    <link rel="stylesheet" href="./fahadstyle.css">
+    <link rel="icon" type="image/png" href="fslogo.png">
+
+<!-- Inter font (ginagamit ng CSS) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+<!--remox icon-->
+
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+
+<input type="checkbox" id="theme-switch" class="theme-switch-input" aria-label="Dark mode">
+
+<!-- Header -->
+
+<header>
+  <a href="index.html" class="logo"><span><sup>2026-2027<br><center>"BINS"</center></sup></span>CCIS DEPARTMENT</a>
+  <a href="#site-menu" id="menu-icon" aria-label="Open menu"><i class="ri-menu-line"></i></a>
+  <ul class="navlist" id="site-menu">
+    <li class="nav-close"><a href="#_"><i class="ri-close-line"></i> Close menu</a></li>
+    <li><a href="index.html" aria-current="page">Home</a></li>
+    <li><a href="news.html">News &amp; Updates</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="journal.html">Journal</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li class="nav-resume"><a href="resume.html">Resume</a></li>
+    <li class="nav-theme"><label for="theme-switch" class="theme-toggle theme-toggle-menu"><i class="ri-sun-fill icon-sun"></i><i class="ri-moon-fill icon-moon"></i><span class="t-dark">Dark mode</span><span class="t-light">Light mode</span></label></li>
+  </ul>
+
+<div class="top-btnn">
+  <label for="theme-switch" class="theme-toggle" title="Light / Dark mode"><i class="ri-sun-fill icon-sun"></i><i class="ri-moon-fill icon-moon"></i></label>
+  <a href="resume.html" class="h-btn h-btn-resume">Resume</a>
+  <a href="#contact" class="h-btn">Contact me</a>
+</div>
+
+</header>
+
+<!-- Header -->
+
+<!-- Home -->
+
+<section class="hero" id="home">
+<div class="main-content">
+  <h4>Hello! There</h4>
+  <h1>I'm <span>Fahad</span></h1>
+  <p>"I build and design responsive websites that deliver seamless user experiences across desktops and mobile devices. Skilled in HTML, CSS, JavaScript, and Java, I enjoy creating clean, functional, and visually appealing applications that support business growth. Currently, I balance my studies and web development journey while working as a crew member at McDonald's near Venice, McKinley West a role that continuously sharpens my time management, teamwork, and resilience. Beyond coding, I stay curious by learning new technologies, practicing mind meditation, playing the guitar, and embracing new challenges. I'm always eager to share my work and connect with fellow developers and professionals!"</p>
+
+<!-- Social Links-->
+
+<div class="social">
+  <a href="https://www.facebook.com/X44FahadSKiie"><i class="ri-facebook-fill"></i></a>
+  <a href="https://github.com/Dontb2"><i class="ri-github-fill"></i></a>
+  <a href="https://t.me/dontbesad2"><i class="ri-telegram-fill"></i></a>
+  <a href="https://youtube.com/@stv2k23?si=X2fgr0auIx7AhbFi"><i class="ri-youtube-fill"></i></a>
+</div>
+
+<!-- Button -->
+
+<div class="main-btn">
+  <a href="#contact" class="btn">Hire me</a>
+  <a href="register.html" class="btn btn2">Register Now!</a>
+</div>
+
+</div>
+</section>
+
+<!-- Introduction Video -->
+
+<section class="intro-video" id="intro-video">
+  <div class="center-text">
+    <h2>Meet <span>Me</span></h2>
+    <p class="section-sub">A short introduction about me and the skills I can bring to my field and talents.</p>
+  </div>
+
+  <div class="video-wrap vertical">
+    <iframe
+      src="https://drive.google.com/file/d/14m7Vc4SupDonTOwCniHnKNmTgi9VpgZB/preview"
+      title="Introduction video of Fahad C. Sumandar"
+      allow="autoplay; encrypted-media; fullscreen"
+      allowfullscreen></iframe>
+  </div>
+
+  <p class="video-open">
+    <a href="https://drive.google.com/file/d/14m7Vc4SupDonTOwCniHnKNmTgi9VpgZB/view" target="_blank" rel="noopener" class="btn">&#9654; Watch on Google Drive</a>
+  </p>
+
+  <p class="section-sub cta-line">Video not playing?</p>
+
+
+</section>
+
+<!-- Theme Song -->
+
+<section class="music" id="music">
+  <div class="center-text">
+    <h2>My <span>Theme Song</span></h2>
+    <p class="section-sub">A song I made about my journey as a student and web developer.</p>
+  </div>
+
+  <div class="music-card">
+    <img src="./fslogo.png" alt="Cover art for Build My Way" class="music-cover">
+    <div class="music-info">
+      <h3>AAG</h3>
+      <p>Fahad C. Sumandar &bull; Created with Suno AI</p>
+      <audio controls preload="none">
+        <source src="./Ako-ang-gagawa.mp3" type="audio/mpeg">
+        Your browser does not support the audio player.
+      </audio>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+
+<section class="testimonials" id="testimonials">
+  <div class="center-text">
+    <h2>What <span>People Say</span></h2>
+    <p class="section-sub">Words from my classmates and instructors.</p>
+  </div>
+
+  <!-- (TESTIMONIALS) -->
+  <div class="testimonial-grid" id="testimonial-list">
+  <!-- PARA MAGDAGDAG NG TESTIMONIAL (tunay na sinabi at may pahintulot nila). Alisin ang <p class="empty-note"> at kopyahin ito:
+  <figure class="testimonial">
+    <i class="ri-double-quotes-l quote-icon"></i>
+    <blockquote>Ang sinabi niya tungkol sa trabaho mo.</blockquote>
+    <figcaption>
+      <span class="avatar">J</span>
+      <span><strong>Juan Dela Cruz</strong><small>Classmate, CCIS</small></span>
+    </figcaption>
+  </figure>
+  -->
+  <p class="empty-note">Testimonials from my classmates and instructors will be posted here soon.</p>
+
+</div>
+
+  <p class="section-sub cta-line">Classmate or instructor? <a href="https://docs.google.com/forms/d/e/1FAIpQLSc5Iti4pNx5TtDOY2lKHufbrwo0wptJgwyb03gtHWlMO_O1_Q/viewform" target="_blank" rel="noopener">Send me a testimonial</a>.</p>
+</section>
+
+<!-- ===== CONTACT (nasa bawat page) ===== -->
+
+<section class="contact" id="contact">
+  <div class="center-text">
+    <h2>Contact <span>me</span></h2>
+  </div>
+
+  <div class="contact-form">
+    <form action="https://formsubmit.co/fsumandar.3903@umak.edu.ph" method="POST" id="contact-form">
+      <!-- Mga nakatagong setting ng FormSubmit -->
+      <input type="hidden" name="_subject" value="New message from your Portfolio Website">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <!-- Pagkatapos magpadala, babalik dito at lalabas ang Thank You pop-up (#thanks-contact) -->
+      <input type="hidden" name="_next" value="https://int-comp-fahads-web.netlify.app/index.html#thanks-contact">
+      <!-- Pang-bitag sa spam bots (huwag tanggalin) -->
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+      <input type="text" id="c-name" name="name" placeholder="Your name" required>
+      <input type="email" id="c-email" name="email" placeholder="Email Address..." required>
+      <input type="tel" id="c-phone" name="phone" placeholder="09123456789 or +14155552671" required
+       pattern="(09[0-9]{9}|\+[1-9][0-9]{7,14})" maxlength="16" inputmode="tel"
+       title="PH: 09123456789 or +639123456789. International: + and country code, 8 to 15 digits (e.g. +14155552671)">
+      <textarea name="message" id="c-message" cols="30" rows="10" placeholder="Write Message Here." required></textarea>
+      <input type="submit" value="Send Message" class="send-btn">
+      <p class="form-note">Your message will be sent directly to my inbox.</p>
+    </form>
+  </div>
+<br>
+  <div class="exp">
+  <p class="exp">
+    | Phone:
+    <span>+639091313890</span>
+    <p class="exp-2">
+    | Email:
+    <span>sumandarfahad4@gmail.com</span>
+    <p class="exp-3">
+    | Address:
+    <span>Taguig, Metro Manila, Philippines</span>
+  </p>
+  </div>
+
+</section>
+
+<!-- ===== THANK YOU POP-UP (Contact form) ===== -->
+<div class="thanks-modal" id="thanks-contact" role="dialog" aria-modal="true" aria-labelledby="thanks-contact-title">
+  <a href="#contact" class="thanks-bg" aria-label="Close"></a>
+  <div class="thanks-card">
+    <div class="tick">&#10003;</div>
+    <h2 id="thanks-contact-title">Thank You!</h2>
+    <p>Your message was sent. I will contact you soon.</p>
+    <div class="thanks-actions">
+      <a href="#contact" class="btn">OK</a>
+      <a href="index.html" class="btn btn2">Back to Home</a>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+
+    <div class="footer-links">
+      <a href="portfolio.html" class="glass"><i class="ri-folder-3-fill"></i> Portfolio</a>
+      <a href="journal.html" class="glass"><i class="ri-book-open-fill"></i> Learning Journal</a>
+      <a href="resume.html" class="glass"><i class="ri-file-user-fill"></i> Resume</a>
+      <a href="register.html" class="glass"><i class="ri-user-add-fill"></i> Register</a>
+    </div>
+
+    <div class="footer-brand">
+      <img src="fslogo.png" alt="FCS logo">
+      <h3>I-BINS</h3>
+      <p>Web Developer &amp; Designer</p>
+      <p>Taguig, Metro Manila, Philippines</p>
+    </div>
+
+    <div class="footer-contact glass">
+      <h4>Contact Us</h4>
+      <p>Email:<br><a href="mailto:sumandarfahad4@gmail.com">sumandarfahad4@gmail.com</a></p>
+      <h4>Follow Us</h4>
+      <div class="footer-social">
+      <a href="https://www.facebook.com/X44FahadSKiie" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+      <a href="https://github.com/Dontb2" aria-label="GitHub"><i class="ri-github-fill"></i></a>
+      <a href="https://t.me/dontbesad2" aria-label="Telegram"><i class="ri-telegram-fill"></i></a>
+      <a href="https://youtube.com/@stv2k23?si=X2fgr0auIx7AhbFi" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p class="copyright"><sup>2026</sup> FCS - All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- Lumulutang na Back to Top (HTML at CSS lang) -->
+<a href="#" class="back-to-top" aria-label="Back to top"><i class="ri-arrow-up-s-fill"></i></a>
+
+<script>
+const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSCQCBX8AfTFub35bltWmk5uWNwHOe1xWtumu9XDLjoS01apQEpDhaaYdMFxqsmawwBNYiVDztenfth/pub?gid=2001147223&single=true&output=csv";
+const list = document.getElementById("testimonial-list");
+
+function parseCSV(t) {
+  const rows = []; let row = [], cur = "", q = false;
+  for (let i = 0; i < t.length; i++) {
+    const c = t[i];
+    if (q) {
+      if (c === '"' && t[i + 1] === '"') { cur += '"'; i++; }
+      else if (c === '"') q = false;
+      else cur += c;
+    } else if (c === '"') q = true;
+    else if (c === ",") { row.push(cur); cur = ""; }
+    else if (c === "\n" || c === "\r") {
+      if (c === "\r" && t[i + 1] === "\n") i++;
+      row.push(cur); rows.push(row); row = []; cur = "";
+    } else cur += c;
+  }
+  if (cur || row.length) { row.push(cur); rows.push(row); }
+  return rows;
+}
+
+function el(tag, cls, text) {
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (text) e.textContent = text;
+  return e;
+}
+
+fetch(CSV_URL)
+  .then(r => r.text())
+  .then(text => {
+    const rows = parseCSV(text).slice(1).filter(r => r[2] && r[2].trim()).reverse();
+    if (!rows.length || !list) return;
+    list.innerHTML = "";
+    rows.forEach(([name, role, msg]) => {
+      const fig = el("figure", "testimonial");
+      fig.appendChild(el("i", "ri-double-quotes-l quote-icon"));
+      fig.appendChild(el("blockquote", "", msg));
+      const cap = el("figcaption");
+      cap.appendChild(el("span", "avatar", (name || "?").trim().charAt(0).toUpperCase()));
+      const who = el("span");
+      who.appendChild(el("strong", "", name));
+      who.appendChild(el("small", "", role));
+      cap.appendChild(who);
+      fig.appendChild(cap);
+      list.appendChild(fig);
+    });
+  })
+  .catch(() => {});
+</script>
+
+</body>
+</html>
