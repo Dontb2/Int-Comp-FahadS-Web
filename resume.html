@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Fahad C. Sumandar</title>
+    <link rel="icon" type="image/png" href="fslogo.png">
+
+<style>
+/* ===== Resume (Biodata) - simple HTML at CSS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #1b1f24;
+    color: #222;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ----- Taas: Back to Home + Print ----- */
+.toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 12px 5%;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    box-shadow: 0 0 20px black;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 22px;
+    background: transparent;
+    color: #13bbff;
+    border: 2px solid #13bbff;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+.btn:hover {
+    background: #13bbff;
+    color: #1b1f24;
+}
+.btn.print {
+    background: #13bbff;
+    color: #1b1f24;
+}
+.btn.print:hover {
+    background: transparent;
+    color: #13bbff;
+}
+
+/* ----- Papel ng resume ----- */
+.paper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 210mm;              /* lapad ng A4 */
+    margin: 24px auto;
+    padding: clamp(20px, 6vw, 12mm);
+    background: #fff;
+    border-radius: 6px;
+}
+/* Sa laptop/tablet: buong taas ng A4 (297mm); sa phone ay sumusunod sa laki ng screen */
+@media (min-width: 840px) {
+    .paper { min-height: 297mm; }
+}
+
+/* Pangalan sa kanan, picture sa kaliwa */
+.head {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 18px;
+    border-bottom: 3px solid #0b6e99;
+}
+.head h1 {
+    font-size: clamp(1.6rem, 5vw, 2.3rem);
+    color: #0b6e99;
+    line-height: 1.2;
+    text-align: center;
+}
+.head .role {
+    margin-top: 4px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    color: #444;
+    text-align: right;
+}
+.contact {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #333;
+    overflow-wrap: anywhere;
+    text-align: right;
+}
+.contact p {
+    margin-bottom: 2px;
+}
+
+/* ===== PICTURE =====
+   Ilagay ang picture mo sa parehong folder at pangalan ng file: resumepic.jpg (palitan ang src sa HTML kung iba ang gamit mo) */
+.photo {
+    flex-shrink: 0;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid #0b6e99;
+    border-radius: 8px;
+    background: #eef3f6;
+    color: #555;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Mga section */
+.section {
+    margin-top: 20px;
+}
+.section h2 {
+    font-size: 1.05rem;
+    color: #0b6e99;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-bottom: 4px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #b8c7d0;
+    text-align: center;
+}
+.section p,
+.section li {
+    font-size: 15px;
+   text-align: justify;
+}
+.section ul {
+    padding-left: 0;
+    list-style: none;
+    
+}
+.section li {
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+.item {
+    margin-bottom: 10px;
+    text-align: center;
+}
+.item strong {
+    display: block;
+}
+.item span {
+    display: block;
+    color: #555;
+    font-size: 14px;
+}
+.item .level {
+    display: block;
+    margin-bottom: 2px;
+    color: #0b6e99;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Dalawang hanay (Education, Awards); isang hanay sa phone */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 14px 20px;
+}
+.grid .item {
+    margin-bottom: 0;
+}
+.grid .item:last-child:nth-child(odd) {
+    grid-column: 1 / -1;           /* ang natirang nag-iisa ay nasa gitna */
+}
+
+/* Personal Information: dalawang hanay ng "label: value" */
+.info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 6px 20px;
+    font-size: 15px;
+    text-align: center;
+}
+.info span {
+    color: #555;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    list-style: none;
+    padding-left: 0;
+}
+.skills li {
+    padding: 4px 12px;
+    border: 1px solid #0b6e99;
+    border-radius: 14px;
+    font-size: 14px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.section-last {
+    margin-bottom: 28px;           /* espasyo bago ang guhit sa taas ng certify */
+}
+
+/* ----- Pirma: guhit sa taas ng pangalan ----- */
+.signature {
+    margin-top: auto;              /* dumidikit sa pinakababa ng A4 na papel */
+    padding-top: 20px;
+    border-top: 3px solid #0b6e99; /* guhit sa taas ng "I hereby certify" */
+    text-align: center;
+    break-inside: avoid;
+}
+.certify {
+    margin-bottom: 56px;           /* espasyo para sa pirma */
+    font-size: 14px;
+    text-align: justify;
+}
+.sign-name small {
+    display: block;
+    color: #444;
+    font-size: 13px;
+    font-weight: normal;
+    letter-spacing: 0;
+}
+.sign-name {
+    display: inline-block;
+    min-width: min(260px, 100%);
+    padding-top: 6px;
+    border-top: 2px solid #222;
+    color: #222;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: .5px;
+    text-align: center;
+}
+
+/* ----- Phone: picture nasa itaas, nasa gitna ----- */
+@media (max-width: 560px) {
+    .head {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .btn {
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+    .skills {
+        justify-content: center;
+    }
+}
+
+/* ----- Print / Save as PDF ----- */
+@page {
+    size: A4;
+    margin: 12mm;
+}
+
+@media print {
+    body {
+        background: #fff;
+    }
+    .toolbar {
+        display: none;
+    }
+    .paper {
+        display: block;
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+        min-height: 0;             /* iwas dagdag na blangkong page */
+        border-radius: 0;
+    }
+    .head {
+        flex-direction: row-reverse;
+    }
+    .section,
+    .item {
+        break-inside: avoid;
+    }
+}
+
+/* ===== Back to top (lumulutang, walang JavaScript) ===== */
+html { scroll-behavior: smooth; }
+.to-top {
+    position: fixed;
+    right: 20px;
+    bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+    z-index: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background: #0b6e99;
+    color: #fff;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, .35);
+    transition: transform .3s ease, background .3s ease;
+}
+.to-top:hover {
+    background: #13bbff;
+    color: #1b1f24;
+    transform: translateY(-3px);
+}
+/* Fade in habang nag-scroll (sa mga browser na may suporta; kung wala, laging nakikita) */
+@supports (animation-timeline: scroll()) {
+    .to-top {
+        opacity: 0;
+        visibility: hidden;
+        animation: to-top-show linear both;
+        animation-timeline: scroll(root block);
+        animation-range: 240px 360px;
+    }
+    @keyframes to-top-show {
+        from { opacity: 0; visibility: hidden; }
+        to   { opacity: 1; visibility: visible; }
+    }
+}
+@media print { .to-top { display: none; } }
+
+/* ===== Mas siksik na layout para magkasya sa isang A4 (sa print at sa malaking screen) ===== */
+@media print, (min-width: 840px) {
+    body { line-height: 1.4; }
+    .head { gap: 16px; padding-bottom: 12px; }
+    .head h1 { font-size: 1.8rem; }
+    .head .role { margin-top: 2px; font-size: 1rem; }
+    .contact { margin-top: 6px; font-size: 12.5px; line-height: 1.3; }
+    .contact p { margin-bottom: 0; }
+    .photo { width: 112px; height: 112px; }
+
+    .section { margin-top: 10px; }
+    .section h2 { margin-bottom: 5px; padding-bottom: 2px; font-size: .95rem; }
+    .section p { font-size: 13.5px; line-height: 1.45; }
+
+    .grid { gap: 6px 16px; }
+    .item strong { font-size: 14px; }
+    .item span { font-size: 12.5px; line-height: 1.35; }
+    .item .level { font-size: 11px; }
+    .info { gap: 3px 16px; font-size: 13.5px; }
+
+    .skills { gap: 6px; }
+    .skills li { padding: 2px 10px; font-size: 13px; }
+
+    .section-last { margin-bottom: 18px; }
+    .signature { padding-top: 14px; }
+    .certify { margin-bottom: 30px; font-size: 13px; }
+    .sign-name { font-size: 14px; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ===== Taas: Back to Home at Print button ===== -->
+<div class="toolbar">
+    <a href="index.html#home" class="btn">&larr; Back to Home</a>
+    <button type="button" class="btn print" onclick="window.print()">PRINT</button>
+</div>
+
+<div class="paper">
+
+    <!-- ===== Pangalan at Picture ===== -->
+    <div class="head">
+        <div>
+            <h1>FAHAD C. SUMANDAR</h1>
+            <p class="role">Web Developer &amp; Designer</p>
+
+            <div class="contact">
+                <p><strong>Phone:</strong> +639091313890</p>
+                <p><strong>Email:</strong> sumandarfahad4@gmail.com</p>
+                <p><strong>Address:</strong> Taguig, Metro Manila, Philippines</p>
+            </div>
+        </div>
+
+        <!-- PICTURE MO: ang file na resumepic.jpg sa parehong folder. Para palitan, palitan ang pangalan sa src sa ibaba. -->
+        <img class="photo" src="./resumepic.jpg" alt="Fahad C. Sumandar">
+    </div>
+
+    <!-- ===== Objective ===== -->
+    <div class="section">
+        <h2>Objective</h2>
+        <p>I build and design websites that people can use on their computers and phones. I know HTML for structure, CSS for style, JavaScript for interactivity, and Java for building programs and applications. I enjoy creating easy-to-use and attractive sites, and I like learning new things to improve my skills.</p>
+    </div>
+
+    <!-- ===== Personal Information ===== -->
+    <div class="section">
+        <h2>Personal Information</h2>
+        <div class="info">
+            <div><strong>Date of Birth:</strong> <span>May 18, 2001</span></div>
+            <div><strong>Civil Status:</strong> <span>Single</span></div>
+            <div><strong>Gender:</strong> <span>Male</span></div>
+            <div><strong>Citizenship:</strong> <span>Filipino</span></div>
+            <div><strong>Height:</strong> <span>5'4"</span></div>
+            <div><strong>Weight:</strong> <span>45 kgs.</span></div>
+        </div>
+    </div>
+
+    <!-- ===== Education ===== -->
+    <div class="section">
+        <h2>Educational Attainment</h2>
+        <div class="grid">
+            <div class="item">
+                <em class="level">College (1st Year)</em>
+                <strong>University of Makati</strong>
+                <span>Bachelor of Science in Information Technology</span>
+                <span>2026 &ndash; Present</span>
+            </div>
+            <div class="item">
+                <em class="level">Senior High School</em>
+                <strong>Taguig National High School</strong>
+                <span>Technical Vocational Livelihood - Information and Communication Technology</span>
+                <span>2024 &ndash; 2026</span>
+            </div>
+            <div class="item">
+                <em class="level">Secondary</em>
+                <strong>Taguig National High School</strong>
+                <span>A. Reyes Street, New Lower Bicutan, Taguig City</span>
+                <span>2021 &ndash; 2024</span>
+            </div>
+            <div class="item">
+                <em class="level">Elementary</em>
+                <strong>Ricardo P. Cruz Sr. Elementary School</strong>
+                <span>MLQ Street, New Lower Bicutan, Taguig City</span>
+                <span>2009 &ndash; 2015</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== Skills ===== -->
+    <div class="section">
+        <h2>Skills</h2>
+        <ul class="skills">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Java</li>
+            <li>Technical Drafting</li>
+            <li>AutoCAD</li>
+            <li>Flexible</li>
+            <li>Creativity Skills</li>
+            <li>Critical Thinking</li>
+            <li>Technical Skills</li>
+            <li>Attention to Detail</li>
+        </ul>
+    </div>
+
+    <!-- ===== Awards and Recognitions ===== -->
+    <div class="section section-last">
+        <h2>Awards and Recognitions</h2>
+        <div class="grid">
+            <div class="item">
+                <strong>2026</strong>
+                <span>Grade 12 Academic Excellence (With Honors)</span>
+                <span>CSS &ndash; National Certificate II</span>
+            </div>
+            <div class="item">
+                <strong>2025</strong>
+                <span>Grade 11 Academic Excellence (With Honors)</span>
+            </div>
+            <div class="item">
+                <strong>2024</strong>
+                <span>Grade 10 Academic Excellence (With Honors)</span>
+                <span>DSPC Mobile Journalism Contest Participation</span>
+            </div>
+            <div class="item">
+                <strong>2023</strong>
+                <span>Grade 9 Academic Excellence (With Honors)</span>
+                <span>Class Leadership Award</span>
+                <span>DCIC Logo Making Contest Participation</span>
+                <span>1st Place in Technical Drafting (DFOT)</span>
+            </div>
+            <div class="item">
+                <strong>2022</strong>
+                <span>Grade 8 Academic Excellence (With High Honors)</span>
+                <span>Best in Filipino Award</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== Pirma (guhit sa taas ng pangalan) ===== -->
+    <div class="signature">
+        <p class="certify">I hereby certify to the best of my knowledge and belief that the information given in the application is true and correct.</p>
+        <p class="sign-name">FAHAD C. SUMANDAR<small>(Applicant)</small></p>
+    </div>
+
+    <!-- PARA MAGDAGDAG (halimbawa Date of Birth, Civil Status, Character Reference):
+         kopyahin ang isang <div class="section"> block sa itaas at palitan ang laman. -->
+
+</div>
+
+<a href="#" class="to-top" aria-label="Back to top">&#8593;</a>
+
+</body>
+</html>
