@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Fahad C. Sumandar</title>
+    <meta name="description" content="Portfolio activities of Fahad C. Sumandar from college and senior high school: HTML, CSS, JavaScript and Java.">
+    <meta name="theme-color" content="#2a8a1c">
+
+<!-- #CSS -->
+
+    <link rel="stylesheet" href="./fahadstyle.css">
+    <link rel="icon" type="image/png" href="fslogo.png">
+
+<!-- Inter font (ginagamit ng CSS) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+<!--remox icon-->
+
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+
+<input type="checkbox" id="theme-switch" class="theme-switch-input" aria-label="Dark mode">
+
+<!-- Header -->
+
+<header>
+  <a href="index.html" class="logo"><span><sup>2026-2027<br><center>"BINS"</center></sup></span>CCIS DEPARTMENT</a>
+  <a href="#site-menu" id="menu-icon" aria-label="Open menu"><i class="ri-menu-line"></i></a>
+  <ul class="navlist" id="site-menu">
+    <li class="nav-close"><a href="#_"><i class="ri-close-line"></i> Close menu</a></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="news.html">News &amp; Updates</a></li>
+    <li><a href="portfolio.html" aria-current="page">Portfolio</a></li>
+    <li><a href="journal.html">Journal</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li class="nav-resume"><a href="resume.html">Resume</a></li>
+    <li class="nav-theme"><label for="theme-switch" class="theme-toggle theme-toggle-menu"><i class="ri-sun-fill icon-sun"></i><i class="ri-moon-fill icon-moon"></i><span class="t-dark">Dark mode</span><span class="t-light">Light mode</span></label></li>
+  </ul>
+
+<div class="top-btnn">
+  <label for="theme-switch" class="theme-toggle" title="Light / Dark mode"><i class="ri-sun-fill icon-sun"></i><i class="ri-moon-fill icon-moon"></i></label>
+  <a href="resume.html" class="h-btn h-btn-resume">Resume</a>
+  <a href="contact.html" class="h-btn">Contact me</a>
+</div>
+
+</header>
+
+<!-- Header -->
+
+<!-- Portfolio -->
+
+<section class="portfolio" id="portfolio">
+<div class="center-text">
+  <h2>My <span>Portfolio</span></h2>
+</div>
+
+<!-- PARA MAGDAGDAG NG FOLDER: kopyahin ang isang <a class="row folder-card"> block at palitan ang laman.
+     Ang href ay dapat tumugma sa id ng folder sa activities.html (halimbawa #folder-html). -->
+<div id="folder-groups">
+  <!-- ===== COLLEGE ===== -->
+  <div class="portfolio-group">
+    <div class="group-head">
+      <h3 class="group-title"><span>College</span></h3>
+      <p class="group-note">University of Makati &bull; Latest Activities</p>
+    </div>
+    <div class="Portfolio-content">
+      <a class="row folder-card" href="activities.html#folder-intro-computer">
+        <img src="./html.png" alt="Introduction to Computer" loading="lazy" decoding="async">
+        <div class="main-row">
+          <div class="row-text"><h5>Introduction to Computer</h5></div>
+          <div class="row-icon"><i class="ri-folder-open-fill"></i></div>
+        </div>
+        <p class="folder-sub">HTML &amp; CSS Activities</p>
+        <h4>6 Activities</h4>
+      </a>
+
+      <a class="row folder-card" href="activities.html#folder-computer-programming">
+        <img src="./java1.png" alt="Computer Programming" loading="lazy" decoding="async">
+        <div class="main-row">
+          <div class="row-text"><h5>Computer Programming</h5></div>
+          <div class="row-icon"><i class="ri-folder-open-fill"></i></div>
+        </div>
+        <p class="folder-sub">Java Programming Activities</p>
+        <h4>COMING SOON</h4>
+      </a>
+    </div>
+  </div>
+
+  <hr class="group-divider">
+
+  <!-- ===== SENIOR HIGH SCHOOL ===== -->
+  <div class="portfolio-group">
+    <div class="group-head">
+      <h3 class="group-title"><span>Senior High School</span></h3>
+      <p class="group-note">Earlier Activities</p>
+    </div>
+    <div class="Portfolio-content">
+      <a class="row folder-card" href="activities.html#folder-html">
+        <img src="./activity1.jpg" alt="HTML Activities" loading="lazy" decoding="async">
+        <div class="main-row">
+          <div class="row-text"><h5>HTML Activities</h5></div>
+          <div class="row-icon"><i class="ri-folder-open-fill"></i></div>
+        </div>
+        <h4>13 ACTIVITIES</h4>
+      </a>
+
+      <a class="row folder-card" href="activities.html#folder-css">
+        <img src="./activity14.png" alt="CSS Activities" loading="lazy" decoding="async">
+        <div class="main-row">
+          <div class="row-text"><h5>CSS Activities</h5></div>
+          <div class="row-icon"><i class="ri-folder-open-fill"></i></div>
+        </div>
+        <h4>9 ACTIVITIES</h4>
+      </a>
+
+      <a class="row folder-card" href="activities.html#folder-js-basics">
+        <img src="./activity23.png" alt="JavaScript Basics" loading="lazy" decoding="async">
+        <div class="main-row">
+          <div class="row-text"><h5>JavaScript Basics</h5></div>
+          <div class="row-icon"><i class="ri-folder-open-fill"></i></div>
+        </div>
+        <h4>7 ACTIVITIES</h4>
+      </a>
+
+      <a class="row folder-card" href="activities.html#folder-js-calculations">
+        <img src="./activity30.png" alt="JavaScript Calculations" loading="lazy" decoding="async">
+        <div class="main-row">
+          <div class="row-text"><h5>JavaScript Calculations</h5></div>
+          <div class="row-icon"><i class="ri-folder-open-fill"></i></div>
+        </div>
+        <h4>5 ACTIVITIES</h4>
+      </a>
+
+      <a class="row folder-card" href="activities.html#folder-js-conditions">
+        <img src="./activity35.png" alt="JavaScript Conditions" loading="lazy" decoding="async">
+        <div class="main-row">
+          <div class="row-text"><h5>JavaScript Conditions</h5></div>
+          <div class="row-icon"><i class="ri-folder-open-fill"></i></div>
+        </div>
+        <h4>5 ACTIVITIES</h4>
+      </a>
+    </div>
+  </div>
+</div>
+
+</section>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+
+    <div class="footer-links">
+      <a href="portfolio.html" class="glass"><i class="ri-folder-3-fill"></i> Portfolio</a>
+      <a href="journal.html" class="glass"><i class="ri-book-open-fill"></i> Learning Journal</a>
+      <a href="resume.html" class="glass"><i class="ri-file-user-fill"></i> Resume</a>
+      <a href="register.html" class="glass"><i class="ri-user-add-fill"></i> Register</a>
+    </div>
+
+    <div class="footer-brand">
+      <img src="fslogo.png" alt="FCS logo">
+      <h3>I-BINS</h3>
+      <p>Web Developer &amp; Designer</p>
+      <p>Taguig, Metro Manila, Philippines</p>
+    </div>
+
+    <div class="footer-contact glass">
+      <h4>Contact Us</h4>
+      <p>Email:<br><a href="mailto:sumandarfahad4@gmail.com">sumandarfahad4@gmail.com</a></p>
+      <h4>Follow Us</h4>
+      <div class="footer-social">
+      <a href="https://www.facebook.com/X44FahadSKiie" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+      <a href="https://github.com/Dontb2" aria-label="GitHub"><i class="ri-github-fill"></i></a>
+      <a href="https://t.me/dontbesad2" aria-label="Telegram"><i class="ri-telegram-fill"></i></a>
+      <a href="https://youtube.com/@stv2k23?si=X2fgr0auIx7AhbFi" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p class="copyright"><sup>2026</sup> FCS - All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- Lumulutang na Back to Top (HTML at CSS lang) -->
+<a href="#" class="back-to-top" aria-label="Back to top"><i class="ri-arrow-up-s-fill"></i></a>
+
+</body>
+</html>
